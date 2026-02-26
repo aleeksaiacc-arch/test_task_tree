@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { loadTree } from "../data/loadTree";
-import type { Person, Tree } from "../types";
+import type { Tree } from "../types";
 import { formatDate } from "../utils/formatDate";
 import { nameForLocale } from "../utils/transliterate";
 
