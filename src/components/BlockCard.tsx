@@ -5,6 +5,11 @@ export type BlockAddition = "left" | "right" | "none";
 export type RootBlock = {
   id: string;
   addition: BlockAddition;
+  firstName: string;
+  lastName: string;
+  born?: string;
+  death?: string;
+  imgSrc?: string;
 };
 
 type Props = RootBlock & {
@@ -29,7 +34,8 @@ function AdditionBlock() {
   );
 }
 
-export default function BlockCard({ id, addition, number }: Props) {
+export default function BlockCard({ id, addition, number, firstName, lastName, born, death, imgSrc }: Props) {
+  const dates = [born, death].filter(Boolean).join(" – ");
   return (
     <HStack spacing={4} justify="center" align="flex-start" w="100%" data-block-id={id}>
       <Box w={BLOCK_WIDTH} flexShrink={0}>
@@ -37,12 +43,20 @@ export default function BlockCard({ id, addition, number }: Props) {
       </Box>
       <Card w={BLOCK_WIDTH} flexShrink={0} id={id}>
         <CardBody>
-          <Box h="120px" bg="gray.100" borderRadius="md" />
+          <Box
+            h="120px"
+            bg="gray.100"
+            borderRadius="md"
+            overflow="hidden"
+            backgroundImage={imgSrc ? `url(${imgSrc})` : undefined}
+            backgroundSize="cover"
+            backgroundPosition="center"
+          />
           <Heading size="md" mt={2} noOfLines={3} color="gray.600" fontWeight="normal">
-            {number}
+            {firstName} {lastName}
           </Heading>
           <Text fontSize="sm" color="gray.500" mt={1}>
-            {number}
+            {dates || "—"}
           </Text>
         </CardBody>
       </Card>

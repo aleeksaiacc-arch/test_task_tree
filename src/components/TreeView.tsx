@@ -11,22 +11,22 @@ import ParentsRow from "./ParentsRow";
 import ChildrenRow from "./ChildrenRow";
 
 const ROOT_BLOCKS: RootBlock[] = [
-  { id: "block-1", addition: "none" },
-  { id: "block-2", addition: "left" },
-  { id: "block-3", addition: "right" },
-  { id: "block-4", addition: "none" },
-  { id: "block-5", addition: "left" },
-  { id: "block-6", addition: "right" },
-  { id: "block-7", addition: "none" },
-  { id: "block-8", addition: "none" },
-  { id: "block-9", addition: "none" },
-  { id: "block-10", addition: "none" },
-  { id: "block-11", addition: "none" },
-  { id: "block-12", addition: "none" },
-  { id: "block-13", addition: "none" },
-  { id: "block-14", addition: "none" },
-  { id: "block-15", addition: "none" },
-  { id: "block-16", addition: "none" },
+  { id: "block-1", addition: "right", firstName: "Ян", lastName: "Комар" },
+  { id: "block-2", addition: "right", firstName: "Вацлав", lastName: "Комар" },
+  { id: "block-3", addition: "right", firstName: "", lastName: "" },
+  { id: "block-4", addition: "none", firstName: "", lastName: "" },
+  { id: "block-5", addition: "left", firstName: "", lastName: "" },
+  { id: "block-6", addition: "right", firstName: "", lastName: "" },
+  { id: "block-7", addition: "none", firstName: "", lastName: "" },
+  { id: "block-8", addition: "none", firstName: "", lastName: "" },
+  { id: "block-9", addition: "none", firstName: "", lastName: "" },
+  { id: "block-10", addition: "none", firstName: "", lastName: "" },
+  { id: "block-11", addition: "none", firstName: "", lastName: "" },
+  { id: "block-12", addition: "none", firstName: "", lastName: "" },
+  { id: "block-13", addition: "none", firstName: "", lastName: "" },
+  { id: "block-14", addition: "none", firstName: "", lastName: "" },
+  { id: "block-15", addition: "none", firstName: "", lastName: "" },
+  { id: "block-16", addition: "none", firstName: "", lastName: "" },
 ];
 
 export default function TreeView() {
@@ -88,12 +88,7 @@ export default function TreeView() {
           </Box>
           <VStack spacing={6} align="center" w="100%">
             {ROOT_BLOCKS.map((block, i) => (
-              <BlockCard
-                key={block.id}
-                id={block.id}
-                addition={block.addition}
-                number={i + 1}
-              />
+              <BlockCard key={block.id} {...block} number={i + 1} />
             ))}
           </VStack>
         </VStack>
@@ -129,12 +124,7 @@ export default function TreeView() {
       </Box>
       <VStack spacing={6} align="center" w="100%">
         {ROOT_BLOCKS.map((block, i) => (
-          <BlockCard
-            key={block.id}
-            id={block.id}
-            addition={block.addition}
-            number={i + 1}
-          />
+          <BlockCard key={block.id} {...block} number={i + 1} />
         ))}
       </VStack>
     </VStack>
