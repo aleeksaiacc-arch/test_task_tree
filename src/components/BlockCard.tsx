@@ -34,10 +34,24 @@ function AdditionBlock() {
   );
 }
 
-export default function BlockCard({ id, addition, number, firstName, lastName, born, death, imgSrc }: Props) {
+export default function BlockCard({
+  id,
+  addition,
+  firstName,
+  lastName,
+  born,
+  death,
+  imgSrc,
+}: Props) {
   const dates = [born, death].filter(Boolean).join(" – ");
   return (
-    <HStack spacing={4} justify="center" align="flex-start" w="100%" data-block-id={id}>
+    <HStack
+      spacing={4}
+      justify="center"
+      align="flex-start"
+      w="100%"
+      data-block-id={id}
+    >
       <Box w={BLOCK_WIDTH} flexShrink={0}>
         {addition === "left" && <AdditionBlock />}
       </Box>
@@ -52,7 +66,13 @@ export default function BlockCard({ id, addition, number, firstName, lastName, b
             backgroundSize="cover"
             backgroundPosition="center"
           />
-          <Heading size="md" mt={2} noOfLines={3} color="gray.600" fontWeight="normal">
+          <Heading
+            size="md"
+            mt={2}
+            noOfLines={3}
+            color="gray.600"
+            fontWeight="normal"
+          >
             {firstName} {lastName}
           </Heading>
           <Text fontSize="sm" color="gray.500" mt={1}>
