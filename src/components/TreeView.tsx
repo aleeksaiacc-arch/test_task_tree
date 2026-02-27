@@ -4,9 +4,30 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { loadTree } from "../data/loadTree";
 import type { Person, Tree } from "../types";
+import type { RootBlock } from "./BlockCard";
+import BlockCard from "./BlockCard";
 import PersonCard from "./PersonCard";
 import ParentsRow from "./ParentsRow";
 import ChildrenRow from "./ChildrenRow";
+
+const ROOT_BLOCKS: RootBlock[] = [
+  { id: "block-1", addition: "none" },
+  { id: "block-2", addition: "left" },
+  { id: "block-3", addition: "right" },
+  { id: "block-4", addition: "none" },
+  { id: "block-5", addition: "left" },
+  { id: "block-6", addition: "right" },
+  { id: "block-7", addition: "none" },
+  { id: "block-8", addition: "none" },
+  { id: "block-9", addition: "none" },
+  { id: "block-10", addition: "none" },
+  { id: "block-11", addition: "none" },
+  { id: "block-12", addition: "none" },
+  { id: "block-13", addition: "none" },
+  { id: "block-14", addition: "none" },
+  { id: "block-15", addition: "none" },
+  { id: "block-16", addition: "none" },
+];
 
 export default function TreeView() {
   const [tree, setTree] = useState<Tree | null>(null);
@@ -33,24 +54,49 @@ export default function TreeView() {
     const wife = tree.people.find((p) => p.id === spouseRel.spouseId);
     if (husband && wife) {
       return (
-        <Box display="flex" flexDirection="row" gap={8} justifyContent="center" flexWrap="wrap" alignItems="flex-start">
-          <VStack spacing={2}>
-            <Text fontWeight="semibold" fontSize="sm" color="gray.600">
-              {t("husband")}
-            </Text>
-            <Link to={`/person/${husband.id}`} style={{ textDecoration: "none" }}>
-              <PersonCard person={husband} isFocused />
-            </Link>
+        <VStack spacing={8} align="center" w="100%">
+          <Box
+            display="flex"
+            flexDirection="row"
+            gap={8}
+            justifyContent="center"
+            flexWrap="wrap"
+            alignItems="flex-start"
+          >
+            <VStack spacing={2}>
+              <Text fontWeight="semibold" fontSize="sm" color="gray.600">
+                {t("husband")}
+              </Text>
+              <Link
+                to={`/person/${husband.id}`}
+                style={{ textDecoration: "none" }}
+              >
+                <PersonCard person={husband} isFocused />
+              </Link>
+            </VStack>
+            <VStack spacing={2}>
+              <Text fontWeight="semibold" fontSize="sm" color="gray.600">
+                {t("wife")}
+              </Text>
+              <Link
+                to={`/person/${wife.id}`}
+                style={{ textDecoration: "none" }}
+              >
+                <PersonCard person={wife} isFocused />
+              </Link>
+            </VStack>
+          </Box>
+          <VStack spacing={6} align="center" w="100%">
+            {ROOT_BLOCKS.map((block, i) => (
+              <BlockCard
+                key={block.id}
+                id={block.id}
+                addition={block.addition}
+                number={i + 1}
+              />
+            ))}
           </VStack>
-          <VStack spacing={2}>
-            <Text fontWeight="semibold" fontSize="sm" color="gray.600">
-              {t("wife")}
-            </Text>
-            <Link to={`/person/${wife.id}`} style={{ textDecoration: "none" }}>
-              <PersonCard person={wife} isFocused />
-            </Link>
-          </VStack>
-        </Box>
+        </VStack>
       );
     }
   }
@@ -73,12 +119,24 @@ export default function TreeView() {
     .filter(Boolean) as Person[];
 
   return (
-    <Box display="flex" flexDirection="column" gap={6} alignItems="center">
-      <ChildrenRow people={children} />
-      <Link to={`/person/${focused.id}`} style={{ textDecoration: "none" }}>
-        <PersonCard person={focused} isFocused />
-      </Link>
-      <ParentsRow people={parents} />
-    </Box>
+    <VStack spacing={8} align="center" w="100%">
+      <Box display="flex" flexDirection="column" gap={6} alignItems="center">
+        <ChildrenRow people={children} />
+        <Link to={`/person/${focused.id}`} style={{ textDecoration: "none" }}>
+          <PersonCard person={focused} isFocused />
+        </Link>
+        <ParentsRow people={parents} />
+      </Box>
+      <VStack spacing={6} align="center" w="100%">
+        {ROOT_BLOCKS.map((block, i) => (
+          <BlockCard
+            key={block.id}
+            id={block.id}
+            addition={block.addition}
+            number={i + 1}
+          />
+        ))}
+      </VStack>
+    </VStack>
   );
 }
