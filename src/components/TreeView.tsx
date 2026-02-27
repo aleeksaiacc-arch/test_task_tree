@@ -13,8 +13,8 @@ import ChildrenRow from "./ChildrenRow";
 const ROOT_BLOCKS: RootBlock[] = [
   { id: "block-1", addition: "right", firstName: "Ян", lastName: "Комар" },
   { id: "block-2", addition: "right", firstName: "Вацлав", lastName: "Комар" },
-  { id: "block-3", addition: "right", firstName: "", lastName: "" },
-  { id: "block-4", addition: "none", firstName: "", lastName: "" },
+  { id: "block-3", addition: "right", firstName: "Ричард", lastName: "Комар" },
+  { id: "block-4", addition: "none", firstName: "Нина", lastName: "Комар" },
   { id: "block-5", addition: "left", firstName: "", lastName: "" },
   { id: "block-6", addition: "right", firstName: "", lastName: "" },
   { id: "block-7", addition: "none", firstName: "", lastName: "" },
