@@ -2,31 +2,39 @@ import { Box, Button, Card, Heading, Text, Image, VStack, Spinner } from "@chakr
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { loadTree } from "../data/loadTree";
-import type { Tree } from "../types";
+import { loadPerson } from "../data/loadPersons";
+import type { Person } from "../types";
 import { formatDate } from "../utils/formatDate";
 import { nameForLocale } from "../utils/transliterate";
 
 export default function PersonPage() {
   const { id } = useParams<{ id: string }>();
   const { t, i18n } = useTranslation();
-  const [tree, setTree] = useState<Tree | null>(null);
+  const [person, setPerson] = useState<Person | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    loadTree().then(setTree);
-  }, []);
-
-  if (!tree) return <Spinner />;
-  const person = id ? tree.people.find((p) => p.id === id) : null;
+    if (!id) {
+      setPerson(null);
+      return;
+    }
+    setIsLoading(true);
+    loadPerson(id)
+      .then((p) => setPerson(p))
+      .finally(() => setIsLoading(false));
+  }, [id]);
+  
+  if (isLoading) return <Spinner />;
   if (!person) return <Text>{t("noPersonSelected")}</Text>;
 
   const displayName = nameForLocale(
-    [person.name, person.patronymic, person.maidenName],
+    [person.lastName, person.firstName, person.patronymic, person.maidenName],
     i18n.language
   );
   const birth = formatDate(i18n.language, person.birthDate);
   const death = formatDate(i18n.language, person.deathDate);
-  const dates = birth || death ? [birth, death].filter(Boolean).join(" – ") : null;
+  const dates =
+    birth || death ? [birth, death].filter(Boolean).join(" – ") : null;
 
   return (
     <Box maxW="800px" mx="auto" p={4}>
@@ -45,7 +53,12 @@ export default function PersonPage() {
                 objectFit="cover"
               />
             ) : (
-              <Box h="200px" bg="gray.100" borderRadius="md" aria-label={t("noPhoto")} />
+              <Box
+                h="200px"
+                bg="gray.100"
+                borderRadius="md"
+                aria-label={t("noPhoto")}
+              />
             )}
             <Heading size="lg" mt={4}>
               {displayName}
@@ -55,9 +68,7 @@ export default function PersonPage() {
                 {dates}
               </Text>
             )}
-            {person.bio && (
-              <Text mt={4}>{person.bio}</Text>
-            )}
+            {person.bio && <Text mt={4}>{person.bio}</Text>}
           </Card.Body>
         </Card.Root>
         <Card.Root>

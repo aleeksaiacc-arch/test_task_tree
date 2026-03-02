@@ -1,19 +1,59 @@
-import { Card, Heading, Text, Image, Box } from "@chakra-ui/react";
+import { Card, Heading, Text, Image, Box, Spinner } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import type { Person } from "../types";
+import { loadPerson } from "../data/loadPersons";
 import { formatDate } from "../utils/formatDate";
 import { nameForLocale } from "../utils/transliterate";
 
 type Props = {
-  person: Person;
+  personId: string;
   isFocused?: boolean;
   onClick?: () => void;
 };
 
-export default function PersonCard({ person, isFocused, onClick }: Props) {
+export default function PersonCard({ personId, isFocused, onClick }: Props) {
   const { t, i18n } = useTranslation();
+  const [person, setPerson] = useState<Person | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (!personId) {
+      setPerson(null);
+      return;
+    }
+    setIsLoading(true);
+    loadPerson(personId)
+      .then((p) => setPerson(p))
+      .finally(() => setIsLoading(false));
+  }, [personId]);
+
+  if (isLoading) {
+    return (
+      <Card.Root maxW={isFocused ? "400px" : "280px"} w="100%">
+        <Card.Body>
+          <Box h="120px" display="flex" alignItems="center" justifyContent="center">
+            <Spinner size="sm" />
+          </Box>
+        </Card.Body>
+      </Card.Root>
+    );
+  }
+
+  if (!person) {
+    return (
+      <Card.Root maxW={isFocused ? "400px" : "280px"} w="100%">
+        <Card.Body>
+          <Text fontSize="sm" color="gray.500">
+            {t("noPersonSelected")}
+          </Text>
+        </Card.Body>
+      </Card.Root>
+    );
+  }
+
   const displayName = nameForLocale(
-    [person.name, person.patronymic, person.maidenName],
+    [person.lastName, person.firstName, person.patronymic, person.maidenName],
     i18n.language
   );
   const birth = formatDate(i18n.language, person.birthDate);

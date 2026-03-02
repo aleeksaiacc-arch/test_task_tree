@@ -14,7 +14,7 @@ export default function ParentsRow({ people }: Props) {
       {people.map((p) => (
         <WrapItem key={p.id}>
           <Link to={`/person/${p.id}`} style={{ textDecoration: "none" }}>
-            <PersonCard person={p} />
+            <PersonCard personId={p.id} />
           </Link>
         </WrapItem>
       ))}

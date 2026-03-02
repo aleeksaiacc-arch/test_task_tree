@@ -2,8 +2,7 @@ import { Box, HStack, Button } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Routes, Route } from "react-router-dom";
-import TreeView from "./components/TreeView";
-import PersonPage from "./pages/PersonPage";
+import { APP_ROUTES } from "./routes";
 
 const LOCALES = ["ru", "pl", "by", "lt"] as const;
 
@@ -28,8 +27,9 @@ function App() {
         ))}
       </HStack>
       <Routes>
-        <Route path="/" element={<TreeView />} />
-        <Route path="/person/:id" element={<PersonPage />} />
+        {APP_ROUTES.map((route) => (
+          <Route key={route.path} path={route.path} element={route.element} />
+        ))}
       </Routes>
     </Box>
   );

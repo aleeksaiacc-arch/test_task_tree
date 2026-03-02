@@ -4,6 +4,8 @@ export type BlockAddition = "left" | "right" | "none";
 
 export type RootBlock = {
   id: string;
+  spouseId: string;
+  familyId: string;
   addition: BlockAddition;
   firstName: string;
   lastName: string;
