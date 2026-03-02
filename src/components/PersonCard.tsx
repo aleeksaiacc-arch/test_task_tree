@@ -1,4 +1,4 @@
-import { Card, CardBody, Heading, Text, Image, Box } from "@chakra-ui/react";
+import { Card, Heading, Text, Image, Box } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import type { Person } from "../types";
 import { formatDate } from "../utils/formatDate";
@@ -22,14 +22,14 @@ export default function PersonCard({ person, isFocused, onClick }: Props) {
     birth || death ? [birth, death].filter(Boolean).join(" – ") : null;
 
   return (
-    <Card
+    <Card.Root
       maxW={isFocused ? "400px" : "280px"}
       w="100%"
       cursor={onClick ? "pointer" : undefined}
       onClick={onClick}
       _hover={onClick ? { shadow: "md" } : undefined}
     >
-      <CardBody>
+      <Card.Body>
         {person.photoUrl ? (
           <Image
             src={person.photoUrl}
@@ -42,7 +42,7 @@ export default function PersonCard({ person, isFocused, onClick }: Props) {
         ) : (
           <Box h="120px" bg="gray.100" borderRadius="md" aria-label={t("noPhoto")} />
         )}
-        <Heading size={isFocused ? "md" : "sm"} mt={2} noOfLines={3}>
+        <Heading size={isFocused ? "md" : "sm"} mt={2} lineClamp={3}>
           {displayName}
         </Heading>
         {dates && (
@@ -51,11 +51,11 @@ export default function PersonCard({ person, isFocused, onClick }: Props) {
           </Text>
         )}
         {isFocused && person.bio && (
-          <Text fontSize="sm" mt={2} noOfLines={4}>
+          <Text fontSize="sm" mt={2} lineClamp={4}>
             {person.bio}
           </Text>
         )}
-      </CardBody>
-    </Card>
+      </Card.Body>
+    </Card.Root>
   );
 }

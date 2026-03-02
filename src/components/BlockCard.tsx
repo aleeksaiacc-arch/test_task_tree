@@ -1,4 +1,4 @@
-import { Card, CardBody, Heading, Text, Box, HStack } from "@chakra-ui/react";
+import { Card, Heading, Text, Box, HStack } from "@chakra-ui/react";
 
 export type BlockAddition = "left" | "right" | "none";
 
@@ -20,17 +20,23 @@ const BLOCK_WIDTH = "300px";
 
 function AdditionBlock() {
   return (
-    <Card w={BLOCK_WIDTH} flexShrink={0}>
-      <CardBody>
+    <Card.Root w={BLOCK_WIDTH} flexShrink={0}>
+      <Card.Body>
         <Box h="120px" bg="gray.100" borderRadius="md" />
-        <Heading size="md" mt={2} noOfLines={3} color="gray.400" fontWeight="normal">
+        <Heading
+          size="md"
+          mt={2}
+          lineClamp={3}
+          color="gray.400"
+          fontWeight="normal"
+        >
           —
         </Heading>
         <Text fontSize="sm" color="gray.400" mt={1}>
           —
         </Text>
-      </CardBody>
-    </Card>
+      </Card.Body>
+    </Card.Root>
   );
 }
 
@@ -46,7 +52,7 @@ export default function BlockCard({
   const dates = [born, death].filter(Boolean).join(" – ");
   return (
     <HStack
-      spacing={4}
+      gap={4}
       justify="center"
       align="flex-start"
       w="100%"
@@ -55,8 +61,8 @@ export default function BlockCard({
       <Box w={BLOCK_WIDTH} flexShrink={0}>
         {addition === "left" && <AdditionBlock />}
       </Box>
-      <Card w={BLOCK_WIDTH} flexShrink={0} id={id}>
-        <CardBody>
+      <Card.Root w={BLOCK_WIDTH} flexShrink={0} id={id}>
+        <Card.Body>
           <Box
             h="120px"
             bg="gray.100"
@@ -69,7 +75,7 @@ export default function BlockCard({
           <Heading
             size="md"
             mt={2}
-            noOfLines={3}
+            lineClamp={3}
             color="gray.600"
             fontWeight="normal"
           >
@@ -78,8 +84,8 @@ export default function BlockCard({
           <Text fontSize="sm" color="gray.500" mt={1}>
             {dates || "—"}
           </Text>
-        </CardBody>
-      </Card>
+        </Card.Body>
+      </Card.Root>
       <Box w={BLOCK_WIDTH} flexShrink={0}>
         {addition === "right" && <AdditionBlock />}
       </Box>

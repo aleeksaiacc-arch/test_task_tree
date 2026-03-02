@@ -54,7 +54,7 @@ export default function TreeView() {
     const wife = tree.people.find((p) => p.id === spouseRel.spouseId);
     if (husband && wife) {
       return (
-        <VStack spacing={8} align="center" w="100%">
+        <VStack gap={8} align="center" w="100%">
           <Box
             display="flex"
             flexDirection="row"
@@ -63,7 +63,7 @@ export default function TreeView() {
             flexWrap="wrap"
             alignItems="flex-start"
           >
-            <VStack spacing={2}>
+            <VStack gap={2}>
               <Text fontWeight="semibold" fontSize="sm" color="gray.600">
                 {t("husband")}
               </Text>
@@ -74,7 +74,7 @@ export default function TreeView() {
                 <PersonCard person={husband} isFocused />
               </Link>
             </VStack>
-            <VStack spacing={2}>
+            <VStack gap={2}>
               <Text fontWeight="semibold" fontSize="sm" color="gray.600">
                 {t("wife")}
               </Text>
@@ -86,7 +86,7 @@ export default function TreeView() {
               </Link>
             </VStack>
           </Box>
-          <VStack spacing={6} align="center" w="100%">
+          <VStack gap={6} align="center" w="100%">
             {ROOT_BLOCKS.map((block, i) => (
               <BlockCard key={block.id} {...block} number={i + 1} />
             ))}
@@ -114,7 +114,7 @@ export default function TreeView() {
     .filter(Boolean) as Person[];
 
   return (
-    <VStack spacing={8} align="center" w="100%">
+    <VStack gap={8} align="center" w="100%">
       <Box display="flex" flexDirection="column" gap={6} alignItems="center">
         <ChildrenRow people={children} />
         <Link to={`/person/${focused.id}`} style={{ textDecoration: "none" }}>
@@ -122,7 +122,7 @@ export default function TreeView() {
         </Link>
         <ParentsRow people={parents} />
       </Box>
-      <VStack spacing={6} align="center" w="100%">
+      <VStack gap={6} align="center" w="100%">
         {ROOT_BLOCKS.map((block, i) => (
           <BlockCard key={block.id} {...block} number={i + 1} />
         ))}

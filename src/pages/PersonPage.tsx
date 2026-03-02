@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardBody, Heading, Text, Image, VStack, Spinner } from "@chakra-ui/react";
+import { Box, Button, Card, Heading, Text, Image, VStack, Spinner } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -30,12 +30,12 @@ export default function PersonPage() {
 
   return (
     <Box maxW="800px" mx="auto" p={4}>
-      <Button as={Link} to="/" variant="link" mb={4} size="sm">
-        {t("backToTree")}
+      <Button asChild variant="plain" mb={4} size="sm">
+        <Link to="/">{t("backToTree")}</Link>
       </Button>
-      <VStack align="stretch" spacing={6}>
-        <Card>
-          <CardBody>
+      <VStack align="stretch" gap={6}>
+        <Card.Root>
+          <Card.Body>
             {person.photoUrl ? (
               <Image
                 src={person.photoUrl}
@@ -58,10 +58,10 @@ export default function PersonPage() {
             {person.bio && (
               <Text mt={4}>{person.bio}</Text>
             )}
-          </CardBody>
-        </Card>
-        <Card>
-          <CardBody>
+          </Card.Body>
+        </Card.Root>
+        <Card.Root>
+          <Card.Body>
             <Heading size="sm" mb={3}>
               {t("personInfo")}
             </Heading>
@@ -78,8 +78,8 @@ export default function PersonPage() {
                 {t("personInfoPlaceholder")}
               </Text>
             </Box>
-          </CardBody>
-        </Card>
+          </Card.Body>
+        </Card.Root>
       </VStack>
     </Box>
   );

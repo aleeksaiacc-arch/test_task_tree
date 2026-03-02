@@ -10,7 +10,7 @@ type Props = {
 export default function ParentsRow({ people }: Props) {
   if (people.length === 0) return null;
   return (
-    <Wrap spacing={4} justify="center">
+    <Wrap gap={4} justify="center">
       {people.map((p) => (
         <WrapItem key={p.id}>
           <Link to={`/person/${p.id}`} style={{ textDecoration: "none" }}>
