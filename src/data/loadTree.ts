@@ -11,7 +11,7 @@ export type LoadedTree = {
 };
 
 export function loadTree(id = "1"): Promise<LoadedTree> {
-  const group = (rootBlocks as Record<string, RootBlocksGroup>)[id];
+  const group = (rootBlocks as unknown as Record<string, RootBlocksGroup>)[id];
   const blocks = group?.descendants ?? [];
   const normalized = blocks.map(({ htmlId, ...rest }) => ({
     id: htmlId,
