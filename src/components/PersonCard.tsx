@@ -30,7 +30,7 @@ export default function PersonCard({ personId, isFocused, onClick }: Props) {
 
   if (isLoading) {
     return (
-      <Card.Root maxW={isFocused ? "400px" : "280px"} w="100%">
+      <Card.Root w={isFocused ? "300px" : "280px"}>
         <Card.Body>
           <Box h="120px" display="flex" alignItems="center" justifyContent="center">
             <Spinner size="sm" />
@@ -42,7 +42,7 @@ export default function PersonCard({ personId, isFocused, onClick }: Props) {
 
   if (!person) {
     return (
-      <Card.Root maxW={isFocused ? "400px" : "280px"} w="100%">
+      <Card.Root w={isFocused ? "300px" : "280px"}>
         <Card.Body>
           <Text fontSize="sm" color="gray.500">
             {t("noPersonSelected")}
@@ -63,8 +63,7 @@ export default function PersonCard({ personId, isFocused, onClick }: Props) {
 
   return (
     <Card.Root
-      maxW={isFocused ? "400px" : "280px"}
-      w="100%"
+      w={isFocused ? "300px" : "280px"}
       cursor={onClick ? "pointer" : undefined}
       onClick={onClick}
       _hover={onClick ? { shadow: "md" } : undefined}
@@ -80,7 +79,13 @@ export default function PersonCard({ personId, isFocused, onClick }: Props) {
             objectFit="cover"
           />
         ) : (
-          <Box h="120px" bg="gray.100" borderRadius="md" aria-label={t("noPhoto")} />
+          <Box
+            h="120px"
+            bg="gray.100"
+            borderRadius="md"
+            aria-label={t("noPhoto")}
+            background="#969daf"
+          />
         )}
         <Heading size={isFocused ? "md" : "sm"} mt={2} lineClamp={3}>
           {displayName}

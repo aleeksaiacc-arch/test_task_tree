@@ -9,6 +9,7 @@ export type RootBlock = {
   addition: BlockAddition;
   firstName: string;
   lastName: string;
+  position: "left" | "right";
   born?: string;
   death?: string;
   imgSrc?: string;
