@@ -4,10 +4,12 @@ export interface Person {
   lastName: string;
   patronymic?: string;
   maidenName?: string;
-  birthDate?: string;
-  deathDate?: string;
+  parents?: { motherId: string; fatherId: string };
+  birthDate: string;
+  deathDate: string;
   photoUrl?: string;
-  bio?: string;
+  bio: string;
+  sex: "male" | "female";
 }
 
 export type PeopleById = Record<string, Person>;

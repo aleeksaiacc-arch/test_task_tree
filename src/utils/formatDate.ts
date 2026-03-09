@@ -1,13 +1,8 @@
-export function formatDate(locale: string, dateStr: string | undefined): string {
+import { format, parseISO, isValid } from "date-fns";
+
+export function formatDate(_locale: string, dateStr: string | undefined): string {
   if (!dateStr) return "";
-  const d = new Date(dateStr);
-  if (isNaN(d.getTime())) return dateStr;
-  const hasDay = dateStr.length >= 10;
-  if (hasDay)
-    return new Intl.DateTimeFormat(locale, {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    }).format(d);
-  return new Intl.DateTimeFormat(locale, { year: "numeric" }).format(d);
+  const d = parseISO(dateStr);
+  if (!isValid(d)) return dateStr;
+  return format(d, "yyyy");
 }

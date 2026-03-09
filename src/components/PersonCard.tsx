@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import type { Person } from "../types";
 import { loadPerson } from "../data/loadPersons";
-import { formatDate } from "../utils/formatDate";
 import { nameForLocale } from "../utils/transliterate";
+import { format, parse } from "date-fns";
 
 type Props = {
   personId: string;
@@ -32,7 +32,12 @@ export default function PersonCard({ personId, isFocused, onClick }: Props) {
     return (
       <Card.Root w={isFocused ? "300px" : "280px"}>
         <Card.Body>
-          <Box h="120px" display="flex" alignItems="center" justifyContent="center">
+          <Box
+            h="120px"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
             <Spinner size="sm" />
           </Box>
         </Card.Body>
@@ -53,13 +58,32 @@ export default function PersonCard({ personId, isFocused, onClick }: Props) {
   }
 
   const displayName = nameForLocale(
-    [person.lastName, person.firstName, person.patronymic, person.maidenName],
-    i18n.language
+    [
+      person.lastName,
+      `${person.maidenName === "notApplicable" ? "" : `(${person.maidenName})`}`,
+      person.firstName,
+      `${person.patronymic === "undefined" ? "" : person.patronymic}`,
+    ],
+    i18n.language,
   );
-  const birth = formatDate(i18n.language, person.birthDate);
-  const death = formatDate(i18n.language, person.deathDate);
-  const dates =
-    birth || death ? [birth, death].filter(Boolean).join(" – ") : null;
+
+  const birth =
+    person.birthDate === "undefined"
+      ? "????"
+      : format(
+          parse(person.birthDate as string, "dd-MM-yyyy", new Date()),
+          "yyyy",
+        );
+
+  const death =
+    person.deathDate === "undefined"
+      ? "????"
+      : format(
+          parse(person.deathDate as string, "dd-MM-yyyy", new Date()),
+          "yyyy",
+        );
+
+  const dates = [birth, death].join(" – ");
 
   return (
     <Card.Root

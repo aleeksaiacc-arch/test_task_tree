@@ -1,23 +1,10 @@
 {
   "1": {
-    "parents": { "wifeId": "1", "husbId": "2" },
+    "parents": { "wifeId": "2", "husbId": "1" },
     "descendants": [
-      { "htmlId": "block-1", "id": "3", "spouseId": "7", "position": "left" },
-      { "htmlId": "block-2", "id": "4", "spouseId": "9", "position": "right" },
-      { "htmlId": "block-3", "id": "5", "spouseId": "11", "position": "left" },
-      { "htmlId": "block-4", "id": "6", "spouseId": "14", "position": "right" },
-      { "htmlId": "block-5", "id": "7", "spouseId": "3", "position": "right" },
-      { "htmlId": "block-6", "id": "8", "spouseId": "13", "position": "left" },
-      { "htmlId": "block-7", "id": "9", "spouseId": "4", "position": "left" },
-      { "htmlId": "block-8", "id": "10", "spouseId": "6", "position": "right" },
-      { "htmlId": "block-9", "id": "11", "spouseId": "5", "position": "right" },
-      { "htmlId": "block-10", "id": "12", "spouseId": "15", "position": "left" },
-      { "htmlId": "block-11", "id": "13", "spouseId": "8", "position": "right" },
-      { "htmlId": "block-12", "id": "14", "spouseId": "10", "position": "left" },
-      { "htmlId": "block-13", "id": "15", "spouseId": "12", "position": "right" },
-      { "htmlId": "block-14", "id": "16", "spouseId": "5", "position": "left" },
-      { "htmlId": "block-15", "id": "17", "spouseId": "11", "position": "right" },
-      { "htmlId": "block-16", "id": "18", "spouseId": "7", "position": "left" }
+      { "htmlId": "block-1", "id": "3", "spouseId": "", "position": "left" },
+      { "htmlId": "block-2", "id": "4", "spouseId": "12", "position": "right" },
+      { "htmlId": "block-3", "id": "5", "spouseId": "", "position": "left" }
     ]
   }
 }

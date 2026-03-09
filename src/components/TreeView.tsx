@@ -65,6 +65,7 @@ export default function TreeView() {
           </Link>
         </VStack>
       </Box>
+
       <VStack gap={6} align="center" w="100%">
         {treeInfo.descendants?.map(({ id, spouseId, position }) => (
           <HStack key={id} gap={8} justifyContent="center" w="100%">

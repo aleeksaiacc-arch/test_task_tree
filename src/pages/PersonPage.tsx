@@ -1,11 +1,21 @@
-import { Box, Button, Card, Heading, Text, Image, VStack, Spinner } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Card,
+  Heading,
+  Text,
+  Image,
+  VStack,
+  Spinner,
+} from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { loadPerson } from "../data/loadPersons";
-import type { Person } from "../types";
-import { formatDate } from "../utils/formatDate";
 import { nameForLocale } from "../utils/transliterate";
+import { format, parse } from "date-fns";
+import { loadPerson } from "../data/loadPersons";
+
+import { Person } from "@/types";
 
 export default function PersonPage() {
   const { id } = useParams<{ id: string }>();
@@ -13,6 +23,24 @@ export default function PersonPage() {
   const [person, setPerson] = useState<Person | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  if (!person) return <Text>{t("noPersonSelected")}</Text>;
+
+  const displayName = nameForLocale(
+    [person.firstName, person.patronymic, person.maidenName],
+    i18n.language,
+  );
+
+  const birth =
+    person.birthDate === "undefined"
+      ? "????"
+      : format(parse(person.birthDate, "dd-MM-yyyy", new Date()), "yyyy");
+
+  const death =
+    person.deathDate === "undefined"
+      ? "????"
+      : format(parse(person.deathDate, "dd-MM-yyyy", new Date()), "yyyy");
+
+  const dates = [birth, death].join(" – ");
   useEffect(() => {
     if (!id) {
       setPerson(null);
@@ -23,18 +51,8 @@ export default function PersonPage() {
       .then((p) => setPerson(p))
       .finally(() => setIsLoading(false));
   }, [id]);
-  
-  if (isLoading) return <Spinner />;
-  if (!person) return <Text>{t("noPersonSelected")}</Text>;
 
-  const displayName = nameForLocale(
-    [person.lastName, person.firstName, person.patronymic, person.maidenName],
-    i18n.language
-  );
-  const birth = formatDate(i18n.language, person.birthDate);
-  const death = formatDate(i18n.language, person.deathDate);
-  const dates =
-    birth || death ? [birth, death].filter(Boolean).join(" – ") : null;
+  if (isLoading) return <Spinner />;
 
   return (
     <Box maxW="800px" mx="auto" p={4}>
