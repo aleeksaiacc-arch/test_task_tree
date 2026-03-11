@@ -6,5 +6,8 @@
   "wife": "Żona",
   "backToTree": "Powrót do drzewa",
   "personInfo": "Informacje o osobie",
-  "personInfoPlaceholder": "Tu będą informacje o osobie (edycja później)"
+  "personInfoPlaceholder": "Tu będą informacje o osobie (edycja później)",
+  "parents": "Rodzice",
+  "father": "Ojciec",
+  "mother": "Matka"
 }

@@ -5,6 +5,7 @@ import type { Person } from "../types";
 import { loadPerson } from "../data/loadPersons";
 import { nameForLocale } from "../utils/transliterate";
 import { format, parse } from "date-fns";
+import { parseBio } from "../utils/parseBio";
 
 type Props = {
   personId: string;
@@ -121,7 +122,7 @@ export default function PersonCard({ personId, isFocused, onClick }: Props) {
         )}
         {isFocused && person.bio && (
           <Text fontSize="sm" mt={2} lineClamp={4}>
-            {person.bio}
+            {parseBio(person.bio)}
           </Text>
         )}
       </Card.Body>

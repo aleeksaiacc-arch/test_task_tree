@@ -6,5 +6,8 @@
   "wife": "Wife",
   "backToTree": "Back to tree",
   "personInfo": "Person info",
-  "personInfoPlaceholder": "Information about this person will go here (editing later)"
+  "personInfoPlaceholder": "Information about this person will go here (editing later)",
+  "parents": "Parents",
+  "father": "Father",
+  "mother": "Mother"
 }

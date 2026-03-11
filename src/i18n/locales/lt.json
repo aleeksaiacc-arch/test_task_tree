@@ -6,5 +6,8 @@
   "wife": "Žmona",
   "backToTree": "Atgal į medį",
   "personInfo": "Asmens informacija",
-  "personInfoPlaceholder": "Čia bus informacija apie asmenį (redagavimas vėliau)"
+  "personInfoPlaceholder": "Čia bus informacija apie asmenį (redagavimas vėliau)",
+  "parents": "Tėvai",
+  "father": "Tėvas",
+  "mother": "Motina"
 }

@@ -4,7 +4,15 @@
     "descendants": [
       { "htmlId": "block-1", "id": "3", "spouseId": "", "position": "left" },
       { "htmlId": "block-2", "id": "4", "spouseId": "12", "position": "right" },
-      { "htmlId": "block-3", "id": "5", "spouseId": "", "position": "left" }
+      { "htmlId": "block-3", "id": "5", "spouseId": "", "position": "left" },
+      {
+        "htmlId": "block-4",
+        "id": "13",
+        "spouseId": "14",
+        "position": "right"
+      },
+      { "htmlId": "block-4", "id": "15", "spouseId": "", "position": "left" },
+      { "htmlId": "block-4", "id": "16", "spouseId": "", "position": "right" }
     ]
   }
 }

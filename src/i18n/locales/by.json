@@ -6,5 +6,8 @@
   "wife": "Жонка",
   "backToTree": "Да родаводу",
   "personInfo": "Інфармацыя аб асобе",
-  "personInfoPlaceholder": "Тут будзе інфармацыя (рэдагаванне пазней)"
+  "personInfoPlaceholder": "Тут будзе інфармацыя (рэдагаванне пазней)",
+  "parents": "Бацькі",
+  "father": "Бацька",
+  "mother": "Маці"
 }

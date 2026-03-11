@@ -20,10 +20,10 @@ export function transliterateCyrillicToLatin(text: string): string {
 const CYRILLIC_LOCALES = new Set(["ru", "by"]);
 
 export function nameForLocale(
-  nameParts: (string | undefined)[],
+  nameParts: (string | undefined | "notApplicable")[],
   locale: string
 ): string {
-  const raw = nameParts.filter(Boolean).join(" ");
+  const raw = nameParts.filter(Boolean).filter(v => v !== "notApplicable").join(" ");
   if (!raw) return "—";
   if (CYRILLIC_LOCALES.has(locale)) return raw;
   return transliterateCyrillicToLatin(raw);
