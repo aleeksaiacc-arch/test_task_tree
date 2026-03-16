@@ -70,7 +70,7 @@ export default function PersonCard({ personId, isFocused, onClick }: Props) {
 
   const birth =
     person.birthDate === "undefined"
-      ? "????"
+      ? "..."
       : format(
           parse(person.birthDate as string, "dd-MM-yyyy", new Date()),
           "yyyy",
@@ -78,7 +78,7 @@ export default function PersonCard({ personId, isFocused, onClick }: Props) {
 
   const death =
     person.deathDate === "undefined"
-      ? "????"
+      ? "..."
       : format(
           parse(person.deathDate as string, "dd-MM-yyyy", new Date()),
           "yyyy",

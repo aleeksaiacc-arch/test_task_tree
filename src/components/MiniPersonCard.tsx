@@ -56,16 +56,16 @@ export default function MiniPersonCard({ personId, label }: Props) {
 
   const birth =
     person.birthDate === "undefined"
-      ? "????"
+      ? "..."
       : format(parse(person.birthDate, "dd-MM-yyyy", new Date()), "yyyy");
 
   const death =
     person.deathDate === "undefined"
-      ? "????"
+      ? "..."
       : format(parse(person.deathDate, "dd-MM-yyyy", new Date()), "yyyy");
 
   return (
-    <Link to={`/person/${person.id}`}>
+    <Link to={`/person/${personId}`}>
       <Box
         p={2}
         borderRadius="lg"

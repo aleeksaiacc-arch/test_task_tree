@@ -1,10 +1,10 @@
 import { Wrap, WrapItem } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import PersonCard from "./PersonCard";
-import type { Person } from "../types";
+import type { PersonWithId } from "../types";
 
 type Props = {
-  people: Person[];
+  people: PersonWithId[];
 };
 
 export default function ChildrenRow({ people }: Props) {

@@ -1,11 +1,13 @@
 {
   "1": {
-    "id": "1",
     "firstName": "Андрей",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Яковлевич",
-    "parents": { "motherId": "7", "fatherId": "6" },
+    "parents": {
+      "motherId": "7",
+      "fatherId": "6"
+    },
     "birthDate": "23-09-1873",
     "deathDate": "undefined",
     "bio": "Комар Андрей Яковлевич родился 23 сентября 1873 года у Якова и Юлии, крещен в православие. Знающие люди сказали, что род вероятно идёт из Пинской шляхты, переселенной в Вилейский повет в 17 веке, но это не точно.",
@@ -13,24 +15,28 @@
     "photoUrl": ""
   },
   "2": {
-    "id": "2",
     "firstName": "Эмилия",
     "lastName": "Комар",
     "maidenName": "Суринт",
     "patronymic": "Ивановна",
-    "parents": { "motherId": "9", "fatherId": "8" },
+    "parents": {
+      "motherId": "9",
+      "fatherId": "8"
+    },
     "birthDate": "20-07-1885",
     "deathDate": "undefined",
     "bio": "Эмилия Комар (Суринт) родилась 20 июля 1885 года, католичка.",
     "sex": "female"
   },
   "3": {
-    "id": "3",
     "firstName": "Ян",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Андреевич",
-    "parents": { "motherId": "", "fatherId": "" },
+    "parents": {
+      "motherId": "",
+      "fatherId": ""
+    },
     "birthDate": "undefined",
     "deathDate": "14-07-1986",
     "bio": "    6 января 2026: Всем привет! Нашла Галину, дочку Яна Комара. Ей 77 лет, живет в том же родительском доме в Петрыкув Трибунальски. Сын Петр живет около Варшавы. Галина работала врачом, она- единственная дочь Яна. Ян работал водителем автобуса, такси, имел свое хозяйство, умер в 1986 году. В Польшу перебрался как репатриант, в 1947 году женился уже в Петрыкув Трибунальски. <br />Телеграмма на похороны Яна Комара. Датирована 14.07.1986г.",
@@ -38,12 +44,14 @@
     "photoUrl": ""
   },
   "4": {
-    "id": "4",
     "firstName": "Вацлав",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Андреевич",
-    "parents": { "motherId": "2", "fatherId": "1" },
+    "parents": {
+      "motherId": "2",
+      "fatherId": "1"
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Крестили в костеле в Плебани. Сейчас на картах Церковь Успения Пресвятой Богородицы. <<Ссылка на гугл карты || https://maps.app.goo.gl/kmxr5eFoUdRuHzLc6>>",
@@ -51,12 +59,14 @@
     "photoUrl": ""
   },
   "5": {
-    "id": "5",
     "firstName": "Ричард",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Андреевич",
-    "parents": { "motherId": "", "fatherId": "" },
+    "parents": {
+      "motherId": "",
+      "fatherId": ""
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Детали уточняются",
@@ -64,12 +74,14 @@
     "photoUrl": ""
   },
   "6": {
-    "id": "6",
     "firstName": "Яков",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "undefined",
-    "parents": { "motherId": "", "fatherId": "" },
+    "parents": {
+      "motherId": "",
+      "fatherId": ""
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Яков Иванович Комар родился в Старой Уше(1848-1849). Его жена Броуко Юлия Ивановна (1850-1851) из деревни Красноселье. Оба были православными, венчались 27.01.1868 в Красносельской церкви, которую передали в православие вместе с прихожанами из католиков после восстания Калиновского. В 1869 переехали из Уши в Олехновичи, собственно оттуда все и пошло. Дети: -Павел(11.01.1869)-умер в 3 года, -Антонина(13.06.1871), -Андрей (23.09.1874)-наш прадед, -Фекла(1884), -Марфа(1890)",
@@ -77,12 +89,14 @@
     "photoUrl": ""
   },
   "7": {
-    "id": "7",
     "firstName": "Юлия",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "undefined",
-    "parents": { "motherId": "undefined", "fatherId": "undefined" },
+    "parents": {
+      "motherId": "undefined",
+      "fatherId": "undefined"
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Детали уточняются",
@@ -90,120 +104,140 @@
     "photoUrl": ""
   },
   "8": {
-    "id": "8",
     "firstName": "Иван",
     "lastName": "Суринт",
     "maidenName": "notApplicable",
     "patronymic": "undefined",
-    "parents": { "motherId": "undefined", "fatherId": "undefined" },
+    "parents": {
+      "motherId": "undefined",
+      "fatherId": "undefined"
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Детали уточняются",
     "sex": "female"
   },
   "9": {
-    "id": "9",
     "firstName": "Мальвина",
     "lastName": "Суринт",
     "maidenName": "Жудро",
     "patronymic": "Игнатьевна",
-    "parents": { "motherId": "11", "fatherId": "10" },
+    "parents": {
+      "motherId": "11",
+      "fatherId": "10"
+    },
     "birthDate": "1-02-1849",
     "deathDate": "undefined",
     "bio": "Детали уточняются",
     "sex": "female"
   },
   "10": {
-    "id": "10",
     "firstName": "Игнатий",
     "lastName": "Жудро",
     "maidenName": "notApplicable",
     "patronymic": "undefined",
-    "parents": { "motherId": "undefined", "fatherId": "undefined" },
+    "parents": {
+      "motherId": "undefined",
+      "fatherId": "undefined"
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Детали уточняются",
     "sex": "female"
   },
   "11": {
-    "id": "11",
     "firstName": "Антонина",
     "lastName": "Жудро",
     "maidenName": "Голуб",
     "patronymic": "undefined",
-    "parents": { "motherId": "undefined", "fatherId": "undefined" },
+    "parents": {
+      "motherId": "undefined",
+      "fatherId": "undefined"
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Голубы были дворянами, т.е. шляхтой, ну т.е. конкретно Антонина была дворянкой. Это точно",
     "sex": "female"
   },
   "12": {
-    "id": "12",
     "firstName": "Нина",
     "lastName": "Комар",
     "maidenName": "Бурилова",
     "patronymic": "Григорьевна",
-    "parents": { "motherId": "undefined", "fatherId": "undefined" },
+    "parents": {
+      "motherId": "undefined",
+      "fatherId": "undefined"
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Детали уточняются",
     "sex": "female"
   },
   "13": {
-    "id": "13",
     "firstName": "Константин",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Андреевич",
-    "parents": { "motherId": "2", "fatherId": "1" },
+    "parents": {
+      "motherId": "2",
+      "fatherId": "1"
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Детали уточняются",
     "sex": "male"
   },
   "14": {
-    "id": "14",
     "firstName": "Ромуальда",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "undefined",
-    "parents": { "motherId": "", "fatherId": "" },
+    "parents": {
+      "motherId": "",
+      "fatherId": ""
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Жена Константина была арестована позже и отбывала наказание как жена врага народа",
     "sex": "female"
   },
   "15": {
-    "id": "15",
     "firstName": "Мария",
     "lastName": "Монит",
     "maidenName": "Комар",
     "patronymic": "Андреевна",
-    "parents": { "motherId": "1", "fatherId": "2" },
+    "parents": {
+      "motherId": "1",
+      "fatherId": "2"
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Уточняется",
     "sex": "female"
   },
   "16": {
-    "id": "16",
     "firstName": "Степан",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Андреевич",
-    "parents": { "motherId": "2", "fatherId": "1" },
+    "parents": {
+      "motherId": "2",
+      "fatherId": "1"
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Уточняется",
     "sex": "male"
   },
   "17": {
-    "id": "17",
     "firstName": "Иван",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Андреевич",
-    "parents": { "motherId": "2", "fatherId": "1" },
+    "parents": {
+      "motherId": "2",
+      "fatherId": "1"
+    },
     "birthDate": "undefined",
     "deathDate": "undefined",
     "bio": "Дочь - Михалевич (Комар) Нина, есть еще одна дочь, но контактов нету",

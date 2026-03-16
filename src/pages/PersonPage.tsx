@@ -51,12 +51,12 @@ export default function PersonPage() {
 
   const birth =
     !person.birthDate || person.birthDate === "undefined"
-      ? "????"
+      ? "..."
       : format(parse(person.birthDate, "dd-MM-yyyy", new Date()), "dd.MM.yyyy");
 
   const death =
     !person.deathDate || person.deathDate === "undefined"
-      ? "????"
+      ? "..."
       : format(parse(person.deathDate, "dd-MM-yyyy", new Date()), "yyyy");
 
   const dates = [birth, death].join(" – ");
@@ -112,17 +112,6 @@ export default function PersonPage() {
                 {dates}
               </Text>
             )}
-            {person.bio && (
-              <Text mt={4}>
-                {person.bio.split("<br />").map((part, i) => (
-                  <span key={i}>
-                    {parseBio(part)}
-                    <br />
-                    <br />
-                  </span>
-                ))}
-              </Text>
-            )}
           </Card.Body>
         </Card.Root>
         <Card.Root>
@@ -139,9 +128,18 @@ export default function PersonPage() {
               borderStyle="dashed"
               borderColor="gray.300"
             >
-              <Text fontSize="sm" color="gray.500">
-                {t("personInfoPlaceholder")}
-              </Text>
+              {!person.bio && t("personInfoPlaceholder")}
+              {person.bio && (
+                <Text fontSize="sm" color="gray.500">
+                  {person.bio.split("<br />").map((part, i) => (
+                    <span key={i}>
+                      {parseBio(part)}
+                      <br />
+                      <br />
+                    </span>
+                  ))}
+                </Text>
+              )}
             </Box>
           </Card.Body>
         </Card.Root>

@@ -1,5 +1,4 @@
 export interface Person {
-  id: string;
   firstName: string;
   lastName: string;
   patronymic?: string;
@@ -13,3 +12,4 @@ export interface Person {
 }
 
 export type PeopleById = Record<string, Person>;
+export type PersonWithId = Person & { id: string };
