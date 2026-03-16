@@ -1,6 +1,6 @@
 import { format, parse, parseISO, isValid } from "date-fns";
 
-function parsePersonDate(dateStr: string): Date | null {
+function parsePersonDate(dateStr: string): Date | null | string {
   if (dateStr.length === 4 && !isNaN(+dateStr)) return dateStr;
   try {
     const d = parse(dateStr, "dd-MM-yyyy", new Date());
