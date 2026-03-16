@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import type { Person } from "../types";
 import { loadPerson } from "../data/loadPersons";
 import { nameForLocale } from "../utils/transliterate";
-import { format, parse } from "date-fns";
+import { formatPersonDateYear } from "../utils/formatDate";
 
 type Props = {
   personId: string;
@@ -54,15 +54,8 @@ export default function MiniPersonCard({ personId, label }: Props) {
     i18n.language,
   );
 
-  const birth =
-    person.birthDate === "undefined"
-      ? "..."
-      : format(parse(person.birthDate, "dd-MM-yyyy", new Date()), "yyyy");
-
-  const death =
-    person.deathDate === "undefined"
-      ? "..."
-      : format(parse(person.deathDate, "dd-MM-yyyy", new Date()), "yyyy");
+  const birth = formatPersonDateYear(person.birthDate);
+  const death = formatPersonDateYear(person.deathDate);
 
   return (
     <Link to={`/person/${personId}`}>

@@ -1,7 +1,9 @@
 import type { Person, PeopleById } from "../types";
-import sampleTree from "./persons.json";
+import persons from "./persons.json";
+import personIds from "./person-ids.json";
 
 export function loadPerson(id: string): Promise<Person | null> {
-  const person = (sampleTree as PeopleById)[id];
+  const resolvedId = (personIds as Record<string, string>)[id] ?? id;
+  const person = (persons as PeopleById)[resolvedId];
   return Promise.resolve(person ?? null);
 }

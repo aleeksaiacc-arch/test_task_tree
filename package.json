@@ -6,6 +6,7 @@
   "author": "",
   "type": "module",
   "scripts": {
+    "migrate-person-keys": "node scripts/migrate-person-keys.mjs",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",

@@ -1,12 +1,12 @@
 {
-  "1": {
+  "komar-andrej-yakovlevich": {
     "firstName": "Андрей",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Яковлевич",
     "parents": {
-      "motherId": "7",
-      "fatherId": "6"
+      "motherId": "komar-yuliya",
+      "fatherId": "komar-yakov"
     },
     "birthDate": "23-09-1873",
     "deathDate": "undefined",
@@ -14,21 +14,21 @@
     "sex": "male",
     "photoUrl": ""
   },
-  "2": {
+  "komar-emiliya-ivanovna": {
     "firstName": "Эмилия",
     "lastName": "Комар",
     "maidenName": "Суринт",
     "patronymic": "Ивановна",
     "parents": {
-      "motherId": "9",
-      "fatherId": "8"
+      "motherId": "surint-malvina-ignatevna",
+      "fatherId": "surint-ivan"
     },
     "birthDate": "20-07-1885",
     "deathDate": "undefined",
     "bio": "Эмилия Комар (Суринт) родилась 20 июля 1885 года, католичка.",
     "sex": "female"
   },
-  "3": {
+  "komar-yan-andreevich": {
     "firstName": "Ян",
     "lastName": "Комар",
     "maidenName": "notApplicable",
@@ -37,28 +37,28 @@
       "motherId": "",
       "fatherId": ""
     },
-    "birthDate": "undefined",
+    "birthDate": "1917",
     "deathDate": "14-07-1986",
-    "bio": "    6 января 2026: Всем привет! Нашла Галину, дочку Яна Комара. Ей 77 лет, живет в том же родительском доме в Петрыкув Трибунальски. Сын Петр живет около Варшавы. Галина работала врачом, она- единственная дочь Яна. Ян работал водителем автобуса, такси, имел свое хозяйство, умер в 1986 году. В Польшу перебрался как репатриант, в 1947 году женился уже в Петрыкув Трибунальски. <br />Телеграмма на похороны Яна Комара. Датирована 14.07.1986г.",
+    "bio": "6 января 2026: Всем привет! Нашла Галину, дочку Яна Комара. Ей 77 лет, живет в том же родительском доме в Петрыкув Трибунальски. Сын Петр живет около Варшавы. Галина работала врачом, она- единственная дочь Яна. Ян работал водителем автобуса, такси, имел свое хозяйство, умер в 1986 году. В Польшу перебрался как репатриант, в 1947 году женился уже в Петрыкув Трибунальски. <br />Телеграмма на похороны Яна Комара. Датирована 14.07.1986г.",
     "sex": "male",
     "photoUrl": ""
   },
-  "4": {
+  "komar-vatslav-andreevich": {
     "firstName": "Вацлав",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Андреевич",
     "parents": {
-      "motherId": "2",
-      "fatherId": "1"
+      "motherId": "komar-emiliya-ivanovna",
+      "fatherId": "komar-andrej-yakovlevich"
     },
-    "birthDate": "undefined",
+    "birthDate": "1930",
     "deathDate": "undefined",
-    "bio": "Крестили в костеле в Плебани. Сейчас на картах Церковь Успения Пресвятой Богородицы. <<Ссылка на гугл карты || https://maps.app.goo.gl/kmxr5eFoUdRuHzLc6>>",
+    "bio": "Год рождения 1930-1934?? Крестили в костеле в Плебани. Сейчас на картах Церковь Успения Пресвятой Богородицы. <<Открыть на карте || https://maps.app.goo.gl/kmxr5eFoUdRuHzLc6>>",
     "sex": "male",
     "photoUrl": ""
   },
-  "5": {
+  "komar-richard-andreevich": {
     "firstName": "Ричард",
     "lastName": "Комар",
     "maidenName": "notApplicable",
@@ -73,7 +73,7 @@
     "sex": "male",
     "photoUrl": ""
   },
-  "6": {
+  "komar-yakov": {
     "firstName": "Яков",
     "lastName": "Комар",
     "maidenName": "notApplicable",
@@ -88,7 +88,7 @@
     "sex": "male",
     "photoUrl": ""
   },
-  "7": {
+  "komar-yuliya": {
     "firstName": "Юлия",
     "lastName": "Комар",
     "maidenName": "notApplicable",
@@ -103,7 +103,7 @@
     "sex": "male",
     "photoUrl": ""
   },
-  "8": {
+  "surint-ivan": {
     "firstName": "Иван",
     "lastName": "Суринт",
     "maidenName": "notApplicable",
@@ -117,21 +117,21 @@
     "bio": "Детали уточняются",
     "sex": "female"
   },
-  "9": {
+  "surint-malvina-ignatevna": {
     "firstName": "Мальвина",
     "lastName": "Суринт",
     "maidenName": "Жудро",
     "patronymic": "Игнатьевна",
     "parents": {
-      "motherId": "11",
-      "fatherId": "10"
+      "motherId": "zhudro-antonina",
+      "fatherId": "zhudro-ignatij"
     },
     "birthDate": "1-02-1849",
     "deathDate": "undefined",
     "bio": "Детали уточняются",
     "sex": "female"
   },
-  "10": {
+  "zhudro-ignatij": {
     "firstName": "Игнатий",
     "lastName": "Жудро",
     "maidenName": "notApplicable",
@@ -145,7 +145,7 @@
     "bio": "Детали уточняются",
     "sex": "female"
   },
-  "11": {
+  "zhudro-antonina": {
     "firstName": "Антонина",
     "lastName": "Жудро",
     "maidenName": "Голуб",
@@ -159,7 +159,7 @@
     "bio": "Голубы были дворянами, т.е. шляхтой, ну т.е. конкретно Антонина была дворянкой. Это точно",
     "sex": "female"
   },
-  "12": {
+  "komar-nina-grigorevna": {
     "firstName": "Нина",
     "lastName": "Комар",
     "maidenName": "Бурилова",
@@ -173,21 +173,21 @@
     "bio": "Детали уточняются",
     "sex": "female"
   },
-  "13": {
+  "komar-konstantin-andreevich": {
     "firstName": "Константин",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Андреевич",
     "parents": {
-      "motherId": "2",
-      "fatherId": "1"
+      "motherId": "komar-emiliya-ivanovna",
+      "fatherId": "komar-andrej-yakovlevich"
     },
-    "birthDate": "undefined",
+    "birthDate": "1912",
     "deathDate": "undefined",
     "bio": "Детали уточняются",
     "sex": "male"
   },
-  "14": {
+  "komar-romualda": {
     "firstName": "Ромуальда",
     "lastName": "Комар",
     "maidenName": "notApplicable",
@@ -201,42 +201,113 @@
     "bio": "Жена Константина была арестована позже и отбывала наказание как жена врага народа",
     "sex": "female"
   },
-  "15": {
+  "monit-mariya-andreevna": {
     "firstName": "Мария",
     "lastName": "Монит",
     "maidenName": "Комар",
     "patronymic": "Андреевна",
     "parents": {
-      "motherId": "1",
-      "fatherId": "2"
+      "motherId": "komar-andrej-yakovlevich",
+      "fatherId": "komar-emiliya-ivanovna"
     },
-    "birthDate": "undefined",
+    "birthDate": "14-06-1928",
     "deathDate": "undefined",
     "bio": "Уточняется",
     "sex": "female"
   },
-  "16": {
+  "komar-stepan-andreevich": {
     "firstName": "Степан",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Андреевич",
     "parents": {
-      "motherId": "2",
-      "fatherId": "1"
+      "motherId": "komar-emiliya-ivanovna",
+      "fatherId": "komar-andrej-yakovlevich"
     },
     "birthDate": "undefined",
     "deathDate": "undefined",
-    "bio": "Уточняется",
+    "bio": "Дата рождения по разным источникам 1934- 1936?",
     "sex": "male"
   },
-  "17": {
+  "komar-anna-antsya-andreevna": {
+    "firstName": "Анна(Анця)",
+    "lastName": "...",
+    "maidenName": "Комар",
+    "patronymic": "Андреевна",
+    "parents": {
+      "motherId": "komar-emiliya-ivanovna",
+      "fatherId": "komar-andrej-yakovlevich"
+    },
+    "birthDate": "1920",
+    "deathDate": "undefined",
+    "bio": "Информация уточняется",
+    "sex": "female"
+  },
+  "komar-yanina-andreevna": {
+    "firstName": "Янина",
+    "lastName": "...",
+    "maidenName": "Комар",
+    "patronymic": "Андреевна",
+    "parents": {
+      "motherId": "komar-emiliya-ivanovna",
+      "fatherId": "komar-andrej-yakovlevich"
+    },
+    "birthDate": "17-04-2022",
+    "deathDate": "undefined",
+    "bio": "Информация уточняется",
+    "sex": "female"
+  },
+  "komar-stanislav-andreevich": {
+    "firstName": "Станислав",
+    "lastName": "Комар",
+    "maidenName": "notApplicable",
+    "patronymic": "Андреевич",
+    "parents": {
+      "motherId": "komar-emiliya-ivanovna",
+      "fatherId": "komar-andrej-yakovlevich"
+    },
+    "birthDate": "1925",
+    "deathDate": "undefined",
+    "bio": "",
+    "sex": "male",
+    "photoUrl": ""
+  },
+  "komar-elena-andreevna": {
+    "firstName": "Елена",
+    "lastName": "Комар",
+    "maidenName": "Снегоцкая",
+    "patronymic": "Андреевна",
+    "parents": {
+      "motherId": "komar-emiliya-ivanovna",
+      "fatherId": "komar-andrej-yakovlevich"
+    },
+    "birthDate": "13-05-1911",
+    "deathDate": "undefined",
+    "bio": "Эмилия Комар (Суринт) родилась 20 июля 1885 года, католичка.",
+    "sex": "female"
+  },
+  "komar-iosif-andreevich": {
+    "firstName": "Иосиф",
+    "lastName": "Комар",
+    "maidenName": "notApplicable",
+    "patronymic": "Андреевич",
+    "parents": {
+      "motherId": "komar-emiliya-ivanovna",
+      "fatherId": "komar-andrej-yakovlevich"
+    },
+    "birthDate": "1914",
+    "deathDate": "undefined",
+    "bio": "Детали уточняются",
+    "sex": "male"
+  },
+  "komar-ivan-andreevich": {
     "firstName": "Иван",
     "lastName": "Комар",
     "maidenName": "notApplicable",
     "patronymic": "Андреевич",
     "parents": {
-      "motherId": "2",
-      "fatherId": "1"
+      "motherId": "komar-emiliya-ivanovna",
+      "fatherId": "komar-andrej-yakovlevich"
     },
     "birthDate": "undefined",
     "deathDate": "undefined",

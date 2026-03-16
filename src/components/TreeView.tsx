@@ -67,7 +67,7 @@ export default function TreeView() {
       </Box>
 
       <VStack gap={6} align="center" w="100%">
-        {treeInfo.descendants?.map(({ id, spouseId, position }) => (
+        {treeInfo.descendants?.map(({ id, spouseId, position }, idx) => (
           <HStack key={id} gap={8} justifyContent="center" w="100%">
             <Box w="300px" flexShrink={0}>
               {position === "left" && (
@@ -80,7 +80,7 @@ export default function TreeView() {
               )}
             </Box>
             <Link to={`/person/${id}`} style={{ textDecoration: "none" }}>
-              <PersonCard personId={id} isFocused />
+              <PersonCard personId={id} isFocused orderNumber={idx + 1} />
             </Link>
             <Box w="300px" flexShrink={0}>
               {position === "right" && (

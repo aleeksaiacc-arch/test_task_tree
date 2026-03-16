@@ -1,18 +1,66 @@
 {
   "1": {
-    "parents": { "wifeId": "2", "husbId": "1" },
+    "parents": {
+      "wifeId": "komar-emiliya-ivanovna",
+      "husbId": "komar-andrej-yakovlevich"
+    },
     "descendants": [
-      { "htmlId": "block-1", "id": "3", "spouseId": "", "position": "left" },
-      { "htmlId": "block-2", "id": "4", "spouseId": "12", "position": "right" },
-      { "htmlId": "block-3", "id": "5", "spouseId": "", "position": "left" },
       {
-        "htmlId": "block-4",
-        "id": "13",
-        "spouseId": "14",
+        "id": "komar-elena-andreevna",
+        "spouseId": "",
+        "position": "left"
+      },
+      {
+        "id": "komar-konstantin-andreevich",
+        "spouseId": "komar-romualda",
         "position": "right"
       },
-      { "htmlId": "block-4", "id": "15", "spouseId": "", "position": "left" },
-      { "htmlId": "block-4", "id": "16", "spouseId": "", "position": "right" }
+      {
+        "id": "komar-iosif-andreevich",
+        "spouseId": "",
+        "position": "right"
+      },
+      {
+        "id": "komar-yan-andreevich",
+        "spouseId": "",
+        "position": "right"
+      },
+      {
+        "id": "komar-anna-antsya-andreevna",
+        "spouseId": "",
+        "position": "left"
+      },
+      {
+        "id": "komar-yanina-andreevna",
+        "spouseId": "",
+        "position": "left"
+      },
+      {
+        "id": "komar-stanislav-andreevich",
+        "spouseId": "",
+        "position": "right"
+      },
+      {
+        "id": "monit-mariya-andreevna",
+        "spouseId": "",
+        "position": "left"
+      },
+      {
+        "id": "komar-vatslav-andreevich",
+        "spouseId": "komar-nina-grigorevna",
+        "position": "right"
+      },
+
+      {
+        "id": "komar-richard-andreevich",
+        "spouseId": "",
+        "position": "left"
+      },
+      {
+        "id": "komar-stepan-andreevich",
+        "spouseId": "1934",
+        "position": "right"
+      }
     ]
   }
 }

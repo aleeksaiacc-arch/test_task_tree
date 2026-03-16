@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { nameForLocale } from "../utils/transliterate";
-import { format, parse } from "date-fns";
+import { formatPersonDateBirth, formatPersonDateYear } from "../utils/formatDate";
 import { loadPerson } from "../data/loadPersons";
 import MiniPersonCard from "../components/MiniPersonCard";
 import { parseBio } from "../utils/parseBio";
@@ -49,15 +49,8 @@ export default function PersonPage() {
     i18n.language,
   );
 
-  const birth =
-    !person.birthDate || person.birthDate === "undefined"
-      ? "..."
-      : format(parse(person.birthDate, "dd-MM-yyyy", new Date()), "dd.MM.yyyy");
-
-  const death =
-    !person.deathDate || person.deathDate === "undefined"
-      ? "..."
-      : format(parse(person.deathDate, "dd-MM-yyyy", new Date()), "yyyy");
+  const birth = formatPersonDateBirth(person.birthDate);
+  const death = formatPersonDateYear(person.deathDate);
 
   const dates = [birth, death].join(" – ");
 

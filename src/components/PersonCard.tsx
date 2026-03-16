@@ -4,16 +4,22 @@ import { useTranslation } from "react-i18next";
 import type { Person } from "../types";
 import { loadPerson } from "../data/loadPersons";
 import { nameForLocale } from "../utils/transliterate";
-import { format, parse } from "date-fns";
+import { formatPersonDateYear } from "../utils/formatDate";
 import { parseBio } from "../utils/parseBio";
 
 type Props = {
   personId: string;
+  orderNumber?: number;
   isFocused?: boolean;
   onClick?: () => void;
 };
 
-export default function PersonCard({ personId, isFocused, onClick }: Props) {
+export default function PersonCard({
+  orderNumber,
+  personId,
+  isFocused,
+  onClick,
+}: Props) {
   const { t, i18n } = useTranslation();
   const [person, setPerson] = useState<Person | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -68,21 +74,8 @@ export default function PersonCard({ personId, isFocused, onClick }: Props) {
     i18n.language,
   );
 
-  const birth =
-    person.birthDate === "undefined"
-      ? "..."
-      : format(
-          parse(person.birthDate as string, "dd-MM-yyyy", new Date()),
-          "yyyy",
-        );
-
-  const death =
-    person.deathDate === "undefined"
-      ? "..."
-      : format(
-          parse(person.deathDate as string, "dd-MM-yyyy", new Date()),
-          "yyyy",
-        );
+  const birth = formatPersonDateYear(person.birthDate);
+  const death = formatPersonDateYear(person.deathDate);
 
   const dates = [birth, death].join(" – ");
 
@@ -92,8 +85,31 @@ export default function PersonCard({ personId, isFocused, onClick }: Props) {
       cursor={onClick ? "pointer" : undefined}
       onClick={onClick}
       _hover={onClick ? { shadow: "md" } : undefined}
+      position="relative"
     >
       <Card.Body>
+        {orderNumber != null && (
+          <Box
+            position="absolute"
+            top="-8px"
+            left="-8px"
+            minW="28px"
+            h="28px"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            borderRadius="full"
+            style={{ background: "linear-gradient(145deg, #e2e8f0 0%, #cbd5e0 100%)" }}
+            color="gray.700"
+            fontSize="xs"
+            fontWeight="bold"
+            boxShadow="0 2px 6px rgba(0, 0, 0, 0.08)"
+            border="2px solid"
+            borderColor="white"
+          >
+            {orderNumber}
+          </Box>
+        )}
         {person.photoUrl ? (
           <Image
             src={person.photoUrl}
