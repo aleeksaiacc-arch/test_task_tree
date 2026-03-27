@@ -86,6 +86,7 @@ export default function PersonCard({
       onClick={onClick}
       _hover={onClick ? { shadow: "md" } : undefined}
       position="relative"
+      borderLeft={orderNumber != null ? "3px solid #dde4fd" : undefined}
     >
       <Card.Body>
         {orderNumber != null && (
