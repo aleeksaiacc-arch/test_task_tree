@@ -56,8 +56,10 @@ export default function PersonCard({
     return (
       <Card.Root w={isFocused ? "300px" : "280px"}>
         <Card.Body>
-          <Text fontSize="sm" color="gray.500">
-            {t("noPersonSelected")}
+          <Box h="120px" bg="gray.100" borderRadius="md" background="#e5e7eb" />
+          <Box mt={2} minH="52px" />
+          <Text fontSize="sm" color="gray.500" mt={1}>
+            {t("noSpouseData")}
           </Text>
         </Card.Body>
       </Card.Root>
@@ -77,8 +79,6 @@ export default function PersonCard({
   const birth = formatPersonDateYear(person.birthDate);
   const death = formatPersonDateYear(person.deathDate);
 
-  const dates = [birth, death].join(" – ");
-
   return (
     <Card.Root
       w={isFocused ? "300px" : "280px"}
@@ -92,20 +92,23 @@ export default function PersonCard({
           <Box
             position="absolute"
             top="-8px"
-            left="-8px"
+            left="-12px"
             minW="28px"
             h="28px"
             display="flex"
             alignItems="center"
             justifyContent="center"
             borderRadius="full"
-            style={{ background: "linear-gradient(145deg, #e2e8f0 0%, #cbd5e0 100%)" }}
+            style={{
+              background: "linear-gradient(145deg, #e2e8f0 0%, #cbd5e0 100%)",
+            }}
             color="gray.700"
             fontSize="xs"
             fontWeight="bold"
             boxShadow="0 2px 6px rgba(0, 0, 0, 0.08)"
             border="2px solid"
             borderColor="white"
+            borderLeftColor={"rgb(203, 213, 224)"}
           >
             {orderNumber}
           </Box>
@@ -131,13 +134,11 @@ export default function PersonCard({
         <Heading size={isFocused ? "md" : "sm"} mt={2} lineClamp={3}>
           {displayName}
         </Heading>
-        {dates && (
-          <Text fontSize="sm" color="gray.600" mt={1}>
-            {dates}
-          </Text>
-        )}
+        <Text fontSize="sm" color="gray.600" mt={1}>
+          {`${birth} - ${death}`}
+        </Text>
         {isFocused && person.bio && (
-          <Text fontSize="sm" mt={2} lineClamp={4}>
+          <Text fontSize="sm" mt={2} lineClamp={2}>
             {parseBio(person.bio)}
           </Text>
         )}

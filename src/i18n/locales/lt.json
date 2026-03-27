@@ -1,5 +1,6 @@
 {
   "noPersonSelected": "Nepasirinktas asmuo",
+  "noSpouseData": "Nėra duomenų apie sutuoktinį",
   "noPhoto": "Nėra nuotraukos",
   "title": "Giminės medis",
   "husband": "Vyras",
@@ -9,5 +10,7 @@
   "personInfoPlaceholder": "Čia bus informacija apie asmenį (redagavimas vėliau)",
   "parents": "Tėvai",
   "father": "Tėvas",
-  "mother": "Motina"
+  "mother": "Motina",
+  "enterYourName": "Įveskite savo vardą",
+  "confirm": "Patvirtinti"
 }

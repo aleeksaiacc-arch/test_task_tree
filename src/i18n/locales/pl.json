@@ -1,5 +1,6 @@
 {
   "noPersonSelected": "Nie wybrano osoby",
+  "noSpouseData": "Brak danych o małżonku",
   "noPhoto": "Brak zdjęcia",
   "title": "Drzewo genealogiczne",
   "husband": "Mąż",
@@ -9,5 +10,7 @@
   "personInfoPlaceholder": "Tu będą informacje o osobie (edycja później)",
   "parents": "Rodzice",
   "father": "Ojciec",
-  "mother": "Matka"
+  "mother": "Matka",
+  "enterYourName": "Podaj swoje imię",
+  "confirm": "Potwierdź"
 }

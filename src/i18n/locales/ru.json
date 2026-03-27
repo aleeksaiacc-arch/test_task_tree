@@ -1,5 +1,6 @@
 {
   "noPersonSelected": "Нет выбранного человека",
+  "noSpouseData": "Нет данных о супруге",
   "noPhoto": "Нет фото",
   "title": "Родословная",
   "husband": "Муж",
@@ -9,5 +10,7 @@
   "personInfoPlaceholder": "Здесь будет информация о человеке (редактирование позже)",
   "parents": "Родители",
   "father": "Отец",
-  "mother": "Мать"
+  "mother": "Мать",
+  "enterYourName": "Введите ваше имя",
+  "confirm": "Подтвердить"
 }

@@ -1,5 +1,6 @@
 {
   "noPersonSelected": "No person selected",
+  "noSpouseData": "No spouse data",
   "noPhoto": "No photo",
   "title": "Family tree",
   "husband": "Husband",
@@ -9,5 +10,7 @@
   "personInfoPlaceholder": "Information about this person will go here (editing later)",
   "parents": "Parents",
   "father": "Father",
-  "mother": "Mother"
+  "mother": "Mother",
+  "enterYourName": "Enter your name",
+  "confirm": "Confirm"
 }

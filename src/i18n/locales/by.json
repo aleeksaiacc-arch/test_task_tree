@@ -1,5 +1,6 @@
 {
   "noPersonSelected": "Няма абранай асобы",
+  "noSpouseData": "Няма даных пра мужа/жонку",
   "noPhoto": "Няма фота",
   "title": "Радавод",
   "husband": "Муж",
@@ -9,5 +10,7 @@
   "personInfoPlaceholder": "Тут будзе інфармацыя (рэдагаванне пазней)",
   "parents": "Бацькі",
   "father": "Бацька",
-  "mother": "Маці"
+  "mother": "Маці",
+  "enterYourName": "Увядзіце сваё імя",
+  "confirm": "Пацвердзіць"
 }
