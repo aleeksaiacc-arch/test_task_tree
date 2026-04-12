@@ -17,6 +17,7 @@ import { formatPersonDateBirth, formatPersonDateYear } from "../utils/formatDate
 import { loadPerson } from "../data/loadPersons";
 import MiniPersonCard from "../components/MiniPersonCard";
 import { parseBio } from "../utils/parseBio";
+import { cloudinaryUrl } from "../utils/cloudinary";
 
 import { Person } from "@/types";
 
@@ -83,7 +84,7 @@ export default function PersonPage() {
           <Card.Body>
             {person.photoUrl ? (
               <Image
-                src={person.photoUrl}
+                src={cloudinaryUrl(person.photoUrl, { width: 800, height: 600 })}
                 alt=""
                 borderRadius="md"
                 maxH="300px"

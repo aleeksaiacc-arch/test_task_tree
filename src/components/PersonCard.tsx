@@ -6,6 +6,7 @@ import { loadPerson } from "../data/loadPersons";
 import { nameForLocale } from "../utils/transliterate";
 import { formatPersonDateYear } from "../utils/formatDate";
 import { parseBio } from "../utils/parseBio";
+import { cloudinaryUrl } from "../utils/cloudinary";
 
 type Props = {
   personId: string;
@@ -116,7 +117,7 @@ export default function PersonCard({
         )}
         {person.photoUrl ? (
           <Image
-            src={person.photoUrl}
+            src={cloudinaryUrl(person.photoUrl, { width: 560, height: 400 })}
             alt=""
             borderRadius="md"
             loading="lazy"

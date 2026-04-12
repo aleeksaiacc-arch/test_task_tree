@@ -1,4 +1,5 @@
 import { Card, Heading, Text, Box, HStack } from "@chakra-ui/react";
+import { cloudinaryUrl } from "../utils/cloudinary";
 
 export type BlockAddition = "left" | "right" | "none";
 
@@ -71,7 +72,7 @@ export default function BlockCard({
             bg="gray.100"
             borderRadius="md"
             overflow="hidden"
-            backgroundImage={imgSrc ? `url(${imgSrc})` : undefined}
+            backgroundImage={imgSrc ? `url(${cloudinaryUrl(imgSrc, { width: 600, height: 240 })})` : undefined}
             backgroundSize="cover"
             backgroundPosition="center"
           />

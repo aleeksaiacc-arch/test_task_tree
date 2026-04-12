@@ -6,6 +6,7 @@ import type { Person } from "../types";
 import { loadPerson } from "../data/loadPersons";
 import { nameForLocale } from "../utils/transliterate";
 import { formatPersonDateYear } from "../utils/formatDate";
+import { cloudinaryUrl } from "../utils/cloudinary";
 
 type Props = {
   personId: string;
@@ -74,7 +75,7 @@ export default function MiniPersonCard({ personId, label }: Props) {
         <HStack gap={2}>
           {person.photoUrl ? (
             <Image
-              src={person.photoUrl}
+              src={cloudinaryUrl(person.photoUrl, { width: 96, height: 96, gravity: "face" })}
               alt=""
               borderRadius="md"
               boxSize="48px"
