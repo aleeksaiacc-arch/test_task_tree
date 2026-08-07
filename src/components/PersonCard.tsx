@@ -117,7 +117,7 @@ export default function PersonCard({
         )}
         {person.photoUrl ? (
           <Image
-            src={cloudinaryUrl(person.photoUrl, { width: 560, height: 400 })}
+            src={cloudinaryUrl(person.photoUrl, { width: 560, height: 800 })}
             alt=""
             borderRadius="md"
             loading="lazy"

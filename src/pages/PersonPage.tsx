@@ -65,21 +65,6 @@ export default function PersonPage() {
         <Link to="/">{t("backToTree")}</Link>
       </Button>
       <VStack align="stretch" gap={6}>
-        {(hasFather || hasMother) && (
-          <Box borderWidth="1px" borderColor="gray.200" borderRadius="xl" p={4}>
-            <Heading size="sm" mb={3}>
-              {t("parents")}
-            </Heading>
-            <HStack gap={4} flexWrap="wrap">
-              {hasFather && (
-                <MiniPersonCard personId={fatherId} label={t("father")} />
-              )}
-              {hasMother && (
-                <MiniPersonCard personId={motherId} label={t("mother")} />
-              )}
-            </HStack>
-          </Box>
-        )}
         <Card.Root>
           <Card.Body>
             {person.photoUrl ? (
@@ -87,8 +72,8 @@ export default function PersonPage() {
                 src={cloudinaryUrl(person.photoUrl, { width: 800, height: 600 })}
                 alt=""
                 borderRadius="md"
-                maxH="300px"
-                objectFit="cover"
+                maxH="400px"
+                objectFit="contain"
               />
             ) : (
               <Box
@@ -106,8 +91,21 @@ export default function PersonPage() {
                 {dates}
               </Text>
             )}
+            {(hasFather || hasMother) && (
+              <Box mt={1} ml={-2}>
+                <HStack gap={4} flexWrap="wrap">
+                  {hasFather && (
+                    <MiniPersonCard personId={fatherId} label={t("father")} />
+                  )}
+                  {hasMother && (
+                    <MiniPersonCard personId={motherId} label={t("mother")} />
+                  )}
+                </HStack>
+              </Box>
+            )}
           </Card.Body>
         </Card.Root>
+
         <Card.Root>
           <Card.Body>
             <Heading size="sm" mb={3}>

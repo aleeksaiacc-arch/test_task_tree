@@ -12,5 +12,8 @@
   "father": "Отец",
   "mother": "Мать",
   "enterYourName": "Введите ваше имя",
-  "confirm": "Подтвердить"
+  "confirm": "Подтвердить",
+  "allPhotos": "Все фотографии",
+  "allRightsReserved": "Все права защищены",
+  "familyArchive": "Семейный архив"
 }

@@ -1,6 +1,7 @@
 import type { ReactElement } from "react";
 import TreeView from "./components/TreeView";
 import PersonPage from "./pages/PersonPage";
+import AllPhotosPage from "./pages/AllPhotosPage";
 
 type AppRoute = {
   path: string;
@@ -11,4 +12,5 @@ export const APP_ROUTES: AppRoute[] = [
   { path: "/", element: <TreeView /> },
   { path: "/tree/:id", element: <TreeView /> },
   { path: "/person/:id", element: <PersonPage /> },
+  { path: "/all-photos", element: <AllPhotosPage /> },
 ];

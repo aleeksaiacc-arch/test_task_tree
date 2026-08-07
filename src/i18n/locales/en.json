@@ -12,5 +12,8 @@
   "father": "Father",
   "mother": "Mother",
   "enterYourName": "Enter your name",
-  "confirm": "Confirm"
+  "confirm": "Confirm",
+  "allPhotos": "All photos",
+  "allRightsReserved": "All rights reserved",
+  "familyArchive": "Family archive"
 }
