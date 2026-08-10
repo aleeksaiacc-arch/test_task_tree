@@ -1,0 +1,4 @@
+# A CRLF checkout of a shell script fails with "bad interpreter" on POSIX
+# systems, which would silently disable the pre-commit guard.
+githooks/** text eol=lf
+*.sh text eol=lf

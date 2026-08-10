@@ -1,0 +1,10 @@
+#!/bin/sh
+# Blocks the padded-payload / shadow-config pattern that compromised this repo
+# in April 2026. See scripts/guard-source.mjs and README.md.
+#
+# Hooks are not installed by cloning. Enable once per clone:
+#
+#   git config core.hooksPath githooks
+#
+# CI runs the same check, so a clone without the hook still cannot land it.
+exec node scripts/guard-source.mjs

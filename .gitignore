@@ -17,6 +17,13 @@ pnpm-debug.log*
 Thumbs.db
 
 *.tsbuildinfo
+
+# tsc -b output for vite.config.ts — must never be committed:
+# Vite prefers vite.config.js over vite.config.ts, so a stale or tampered
+# artifact here silently replaces the real config.
+/vite.config.js
+/vite.config.d.ts
+
 coverage/
 .nyc_output/
 

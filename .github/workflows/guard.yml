@@ -1,0 +1,32 @@
+name: guard
+
+# Mirrors the githooks/pre-commit check, because hooks are local-only and a
+# fresh clone has none. See scripts/guard-source.mjs.
+on:
+  push:
+  pull_request:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # No dependencies needed — the guard uses only node builtins and git.
+      - run: node scripts/guard-source.mjs
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The build stamp reads git metadata; a shallow clone degrades it.
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: yarn install --frozen-lockfile
+      - run: yarn build

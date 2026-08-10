@@ -16,7 +16,13 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
-    "paths": { "@/*": ["src/*"] }
+    "paths": { "@/*": ["src/*"] },
+    // @types/node exists for vite.config.ts only. Without this, `process`,
+    // `Buffer` and `__dirname` would typecheck inside src/ and fail in the
+    // browser. The /// <reference types="vite/client" /> in src/vite-env.d.ts
+    // is explicit and unaffected.
+    "types": [],
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tsbuildinfo"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
